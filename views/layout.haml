@@ -3,6 +3,20 @@
   %head
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html;charset=utf-8'} 
     %title Steven Wilkin
+    - ['screen', 'stevenwilkin'].each do |css|
+      %link{:type => 'text/css', :rel => 'stylesheet', :media => 'all', :href => "/css/#{css}.css"}
+    /[if IE]
+      %link{:type => 'text/css', :rel => 'stylesheet', :media => 'all', :href => '/css/ie.css'}
   %body
-    #container
+    #header.container.showgrid
+      #logo.span-6
+        %h1
+          %a{:href => '/'} Steven Wilkin
+      #nav.span-18.last
+        %ul
+          %li
+            %a{:href => '/'} home
+          %li
+            %a{:href => '/projects'} projects
+    #content.container.showgrid
       = yield
