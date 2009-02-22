@@ -1,5 +1,6 @@
 !!! Strict
 %html{:xmlns => "http://www.w3.org/1999/xhtml", 'xml:lang' => 'en', :lang => 'en'}
+
   %head
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html;charset=utf-8'} 
     %title Steven Wilkin
@@ -7,16 +8,17 @@
       %link{:type => 'text/css', :rel => 'stylesheet', :media => 'all', :href => "/css/#{css}.css"}
     /[if IE]
       %link{:type => 'text/css', :rel => 'stylesheet', :media => 'all', :href => '/css/ie.css'}
-  %body
+
+  %body{:id => @id_for_body ||= ''}
     #header.container.showgrid
       #logo.span-6
         %h1
           %a{:href => '/'} Steven Wilkin
       #nav.span-18.last
         %ul
-          %li
+          %li#home
             %a{:href => '/'} home
-          %li
+          %li#projects
             %a{:href => '/projects'} projects
     #content.container.showgrid
       = yield
