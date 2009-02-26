@@ -16,6 +16,26 @@ get '/' do
 end
 
 get '/projects' do
+	@projects = [
+		{
+			:domain => 'stevenwilkin.com',
+			:desc => 'This site, which is currently running on Sinatra',
+			:git => 'http://github.com/stevenwilkin/stevenwilkin.com'
+		},
+		{
+			:domain => 'hugagoth.com',
+			:desc => 'A novelty site created to help me learn Rails'
+		},
+		{
+			:domain => 'hometi.me',
+			:desc => 'Another novelty site, running on CakePHP and making heavy use of AJAX',
+			:git => 'github'},
+		{
+			:domain => 'isitraininginbelfast.com',
+			:desc => 'An experiment in Ruby, CRON and screen-scraping',
+			:git => 'http://github.com/stevenwilkin/isitraininginbelfast.com'
+		}
+	]
 	@id_for_body = 'projects'
 	haml :projects
 end

@@ -1,1 +1,12 @@
-projects
+%p
+  A few of my personal projects, some with publicly available code on
+  %a{:href => 'http://github.com/stevenwilkin'} GitHub
+
+%dl
+  - @projects.each do |p|
+    %dt.span-5
+      %a{:href => 'http://' + p[:domain]}== #{p[:domain]}
+      - if(p[:git])
+        %span
+          %a{:href => p[:git]}== #{p[:domain]} on GitHub
+    %dd.span-18== #{p[:desc]}

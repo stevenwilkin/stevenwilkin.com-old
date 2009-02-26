@@ -16,6 +16,8 @@ ul {
 	margin-top: 30px;
 }
 
+
+/* {{{ navigation */
 #nav {
 	margin-top: 1.5em;
 }
@@ -28,8 +30,10 @@ ul {
 #nav ul li a {
 	display: block;
 }
+/* }}} */
 
-/* social networking links */
+
+/* {{{{ social networking links */
 ul#links li {
 	float: left;
 	width: 32px;
@@ -63,3 +67,32 @@ li#delicious {
 li#lastfm {
 	background-image: url(/img/lastfm.png);
 }
+/* }}} */
+
+
+/* {{{ projects */
+#projects dl dt {
+	float: left;
+	clear: left;
+	height: 3em;
+}
+
+#projects dl dt a {
+	float: left;
+}
+
+#projects dl dt span a {
+	width: 16px;
+	height: 16px;
+	display: block;
+	float: right;
+	text-indent: -1000px;
+	background-image: url(/img/github.png);
+	margin-top: 3px;
+}
+
+#projects dl dd {
+	float: left;
+	height: 3em;
+}
+/* }}} */
