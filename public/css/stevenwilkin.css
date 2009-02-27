@@ -30,6 +30,19 @@ ul {
 #nav ul li a {
 	display: block;
 }
+
+#home li#nav_home a {
+	text-decoration: underline;
+}
+
+#projects li#nav_projects a {
+	text-decoration: underline;
+}
+
+#contact li#nav_contact a {
+	text-decoration: underline;
+}
+
 /* }}} */
 
 
@@ -94,5 +107,12 @@ li#lastfm {
 #projects dl dd {
 	float: left;
 	height: 3em;
+}
+/* }}} */
+
+
+/** {{{ contact */
+label {
+	float: left;
 }
 /* }}} */
