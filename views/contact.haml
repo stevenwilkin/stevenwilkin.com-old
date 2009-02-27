@@ -1,0 +1,13 @@
+%form{:method => 'post', :action => '/contact'}
+  %p
+    %label{:for => 'name'} Name
+    %input{:type => 'text', :name => 'name', :id => 'name', :value => @name ||= ''}
+  %p
+    %label{:for => 'email'} Email
+    %input{:type => 'text', :name => 'email', :id => 'email', :value => @email ||= ''}
+  %p
+    %label{:for => 'message'} Message
+    %textarea{:name => 'message', :id => 'message'}
+      = @message ||= ''
+  #submit
+    %input{:type => 'submit', :value => 'Send'}

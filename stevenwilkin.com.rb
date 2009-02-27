@@ -39,3 +39,13 @@ get '/projects' do
 	@id_for_body = 'projects'
 	haml :projects
 end
+
+get '/contact' do
+	haml :contact
+end
+
+post '/contact' do
+	@info = params[:name]
+	params.each{|param, value| eval "@#{param} = '#{value}'"}
+	haml :contact
+end
