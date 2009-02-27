@@ -28,8 +28,8 @@ get '/projects' do
 		},
 		{
 			:domain => 'hometi.me',
-			:desc => 'Another novelty site, running on CakePHP and making heavy use of AJAX',
-			:git => 'github'},
+			:desc => 'Another novelty site, running on CakePHP and making heavy use of AJAX'
+		},
 		{
 			:domain => 'isitraininginbelfast.com',
 			:desc => 'An experiment in Ruby, CRON and screen-scraping',
@@ -41,10 +41,12 @@ get '/projects' do
 end
 
 get '/contact' do
+	@id_for_body = 'contact'
 	haml :contact
 end
 
 post '/contact' do
+	@id_for_body = 'contact'
 	@info = params[:name]
 	params.each{|param, value| eval "@#{param} = '#{value}'"}
 	haml :contact
