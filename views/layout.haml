@@ -3,7 +3,8 @@
 
   %head
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html;charset=utf-8'} 
-    %title Steven Wilkin
+    %title Steven Wilkin :: Developer, Geek, Professional Coffee Drinker
+    %meta{:type => 'description', :content => 'A software developing, coffee drinking, weight lifting geek based in Belfast, Northern Ireland'}
     - ['screen', 'stevenwilkin'].each do |css|
       %link{:type => 'text/css', :rel => 'stylesheet', :media => 'all', :href => "/css/#{css}.css"}
     /[if IE]
@@ -24,3 +25,10 @@
             %a{:href => '/contact'} contact
     #content.container
       = yield
+
+%script{:type => 'text/javascript'}
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+%script{:type => 'text/javascript'}
+  var pageTracker = _gat._getTracker("UA-2764682-5");
+  pageTracker._trackPageview();
