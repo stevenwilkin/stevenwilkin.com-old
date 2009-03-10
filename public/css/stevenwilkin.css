@@ -3,8 +3,18 @@
  * SJW
  */
 
+body {
+	background: #D5E6F3;
+	color: #111111;
+}
+
 a {
 	text-decoration: none;
+	color: #033E6B;;
+}
+
+a:hover {
+	color: #5D94BF;
 }
 
 ul {
