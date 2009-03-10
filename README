@@ -1,1 +1,3 @@
 Experimenting with converting my one-page vanity domain into a Sintara app
+
+Depends upon HAML for view templates and `mailx` to send contact form emails
