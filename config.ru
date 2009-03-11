@@ -11,4 +11,4 @@ STDOUT.reopen(log)
 STDERR.reopen(log)
 
 require 'stevenwilkin.com.rb'
-run Sinatra.application
+run Sinatra::Application
