@@ -4,9 +4,9 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 
-EMAIL_REGEX		||= /\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/
-EMAIL_TO		||= 'steve@stevenwilkin.com'
-EMAIL_SUBJECT	||= '[Contact Form] stevenwilkin.com'
+EMAIL_REGEX		= /\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/ unless defined? EMAIL_REGEX
+EMAIL_TO		= 'steve@stevenwilkin.com' unless defined? EMAIL_TO
+EMAIL_SUBJECT	= '[Contact Form] stevenwilkin.com' unless defined? EMAIL_SUBJECT
 
 get '/' do
 	def age
