@@ -19,6 +19,11 @@ get '/' do
 	haml :index
 end
 
+get '/cv' do
+	@id_for_body = 'cv'
+	haml :cv
+end
+
 get '/projects' do
 	@projects = [
 		{

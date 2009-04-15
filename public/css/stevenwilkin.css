@@ -45,6 +45,10 @@ ul {
 	text-decoration: underline;
 }
 
+#cv li#nav_cv a {
+	text-decoration: underline;
+}
+
 #projects li#nav_projects a {
 	text-decoration: underline;
 }
