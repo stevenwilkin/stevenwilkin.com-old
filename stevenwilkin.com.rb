@@ -48,6 +48,11 @@ get '/projects' do
 			:domain=> 'movies.stevenwilkin.com',
 			:desc=> 'A small Rails app to manage my DVD collection',
 			:git=> 'http://github.com/stevenwilkin/movies.stevenwilkin.com'
+		},
+		{
+			:domain => 'io.gd',
+			:desc => 'A trivial URL shortening service developed with Rails',
+			:git => 'http://github.com/stevenwilkin/io.gd'
 		}
 	]
 	@id_for_body = 'projects'
