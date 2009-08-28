@@ -53,6 +53,11 @@ get '/projects' do
 			:domain => 'io.gd',
 			:desc => 'A trivial URL shortening service developed with Rails',
 			:git => 'http://github.com/stevenwilkin/io.gd'
+		},
+		{
+			:domain=> 'istrending.com',
+			:desc=> 'A small Twitter/Google Images mashup powered by Sinatra',
+			:git=> 'http://github.com/stevenwilkin/istrending.com'
 		}
 	]
 	@id_for_body = 'projects'
