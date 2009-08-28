@@ -9,6 +9,8 @@
       %link{:type => 'text/css', :rel => 'stylesheet', :media => 'all', :href => "/css/#{css}.css"}
     /[if IE]
       %link{:type => 'text/css', :rel => 'stylesheet', :media => 'all', :href => '/css/ie.css'}
+    - ['jquery', 'stevenwilkin'].each do |js|
+      %script{:type => 'text/javascript', :src => "/js/#{js}.js"}
 
   %body{:id => @id_for_body ||= ''}
     #header.container
@@ -27,10 +29,3 @@
             %a{:href => '/contact'} contact
     #content.container
       = yield
-
-    %script{:type => 'text/javascript'}
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    %script{:type => 'text/javascript'}
-      var pageTracker = _gat._getTracker("UA-2764682-5");
-      pageTracker._trackPageview();
