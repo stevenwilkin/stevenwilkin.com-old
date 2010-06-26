@@ -33,6 +33,11 @@ get '/projects' do
 			:git => 'http://github.com/stevenwilkin/stevenwilkin.com'
 		},
 		{
+			:domain => 'life.stevenwilkin.com',
+			:desc => 'An experimental lifestream app developed with Sinatra',
+			:git => 'http://github.com/stevenwilkin/life.stevenwilkin.com'
+		},
+		{
 			:domain => 'hugagoth.com',
 			:desc => 'A novelty site created to help me learn Rails'
 		},
