@@ -38,7 +38,8 @@ get '/projects' do
 		},
 		{
 			:domain => 'hometi.me',
-			:desc => 'Another novelty site, running on CakePHP and making heavy use of AJAX'
+			:desc => 'Another novelty site, implemented with Sinatra and JavaScript, hosted on Heroku',
+			:git => 'http://github.com/stevenwilkin/hometi.me'
 		},
 		{
 			:domain => 'isitraininginbelfast.com',
