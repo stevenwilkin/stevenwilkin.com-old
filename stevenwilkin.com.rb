@@ -78,9 +78,9 @@ end
 
 post '/contact' do
 	@id_for_body = 'contact'
-	@name = params[:name]
-	@email = params[:email]
-	@message = params[:message]
+	@name = params[:name] || ''
+	@email = params[:email] || ''
+	@message = params[:message] || ''
 	# form validation - required fields
 	@info = nil
 	['message', 'email', 'name'].each do |field_name|
