@@ -8,4 +8,10 @@ describe "The Contact Page" do
     last_response.should be_ok
   end
 
+  context "email address regular expression" do
+    it "should recognise invalid addresses" do
+      ('user@domain' =~ EMAIL_REGEX).should be_false
+    end
+  end
+
 end
