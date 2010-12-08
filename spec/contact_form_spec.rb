@@ -12,6 +12,10 @@ describe "The Contact Page" do
     it "should recognise invalid addresses" do
       ('user@domain' =~ EMAIL_REGEX).should be_false
     end
+
+    it "should recognise valid addresses" do
+      ('user@domain.com' =~ EMAIL_REGEX).should be_true
+    end
   end
 
 end
