@@ -3,6 +3,7 @@
 # the following in your config.ru will cause all traffic to stevenwilkin.co.uk to
 # be redirected to stevenwilkin.com if both domains are served by the same app
 #
+# require 'redirect_to_tld'
 # use RedirectToTLD, 'stevenwilkin.com'
 #
 class RedirectToTLD
