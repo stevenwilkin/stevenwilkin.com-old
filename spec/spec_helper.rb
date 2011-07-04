@@ -13,5 +13,5 @@ set :logging, false
 
 # Add an app method for RSpec
 def app
-  Sinatra::Application
+  StevenWilkinDotCom
 end
