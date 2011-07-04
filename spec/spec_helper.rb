@@ -1,9 +1,8 @@
-require File.join(File.dirname(__FILE__), '..', 'stevenwilkin.com')
-
-require 'rubygems'
 require 'sinatra'
 require 'rack/test'
 require 'rspec'
+
+require File.join(File.dirname(__FILE__), '..', 'stevenwilkin.com')
 
 # set test environment
 set :environment, :test

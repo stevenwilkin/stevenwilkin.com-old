@@ -1,8 +1,3 @@
-#!/usr/bin/env ruby
-
-require 'rubygems'
-require 'sinatra'
-require 'haml'
 require 'date'
 
 EMAIL_REGEX		= /\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/ unless defined? EMAIL_REGEX
