@@ -1,8 +1,10 @@
 require 'date'
+require 'pony'
 
 EMAIL_REGEX		= /\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/ unless defined? EMAIL_REGEX
 EMAIL_TO		= 'steve@stevenwilkin.com' unless defined? EMAIL_TO
 EMAIL_SUBJECT	= '[Contact Form] stevenwilkin.com' unless defined? EMAIL_SUBJECT
+EMAIL_FROM    = 'contact@stevenwilkin.com'
 
 class StevenWilkinDotCom < Sinatra::Base
   
@@ -93,12 +95,10 @@ class StevenWilkinDotCom < Sinatra::Base
 		# valid email address? all fields must already be present
 		@info = 'Please enter a valid Email' if @info.nil? && @email !~ EMAIL_REGEX
 		if @info.nil?
-			# build the mailx syntax
-			mailx = 'echo "'
-			params.each {|key, value| mailx += "#{key.capitalize}: #{value}\n"}
-			mailx += "\"| mailx -s '#{EMAIL_SUBJECT}' #{EMAIL_TO} "
-			# send the mail
-			system mailx
+      body = ''
+      params.each {|key, value| body += "#{key.capitalize}: #{value}\n"}
+      Pony.mail(:to => EMAIL_TO, :subject => EMAIL_SUBJECT, :from => EMAIL_FROM,
+        :body => body)
 			haml :contact_thanks
 		else
 			haml :contact
