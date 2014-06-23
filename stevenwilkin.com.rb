@@ -13,13 +13,7 @@ class StevenWilkinDotCom < Sinatra::Base
   set :logging, true
 
   get '/' do
-		def age
-			dob = Date::civil(1980, 1, 3)
-			age = Date.today.year - dob.year
-			age -= (Date.today < Date::civil(Date.today.year, dob.month, dob.day)) ? 1 : 0
-		end
 		@id_for_body = 'home'
-		@age = age
 		haml :index
 	end
 	
