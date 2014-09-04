@@ -8,7 +8,8 @@ class NoWWW
   
   def call(env)
     if env['HTTP_HOST'] =~ STARTS_WITH_WWW
-      [301, { 'Location' => Rack::Request.new(env).url.sub(/www\./i, '') }, ['Redirecting...']]
+      [301, { 'Location' => Rack::Request.new(env).url.sub(/www\./i, ''),
+              'Content-Type' => 'text/plain' }, ['Redirecting...']]
     else
       @app.call(env)
     end
