@@ -92,7 +92,15 @@ class StevenWilkinDotCom < Sinatra::Base
       body = ''
       params.each {|key, value| body += "#{key.capitalize}: #{value}\n"}
       Pony.mail(:to => EMAIL_TO, :subject => EMAIL_SUBJECT, :from => EMAIL_FROM,
-        :body => body)
+        :body => body, :via_options => {
+          :address => 'smtp.sendgrid.net',
+          :port => '587',
+          :domain => 'heroku.com',
+          :user_name => ENV['SENDGRID_USERNAME'],
+          :password => ENV['SENDGRID_PASSWORD'],
+          :authentication => :plain,
+          :enable_starttls_auto => true
+      })
 			haml :contact_thanks
 		else
 			haml :contact
