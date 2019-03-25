@@ -1,21 +1,3 @@
 %p
   You can contact me directly via
   %a{:href => ''}email
-  or use this form:
-
-%form{:method => 'post', :action => '/contact'}
-  %p
-    %label.span-2{:for => 'name'} Name
-    %input{:type => 'text', :name => 'name', :id => 'name', :value => @name ||= ''}
-  %p
-    %label.span-2{:for => 'email'} Email
-    %input{:type => 'text', :name => 'email', :id => 'email', :value => @email ||= ''}
-  %p
-    %label.span-2{:for => 'message'} Message
-    %textarea{:name => 'message', :id => 'message', :rows => 5, :cols => 50}
-      = @message ||= ''
-  #submit
-    %input{:type => 'submit', :value => 'Send'}
-
-- if @info
-  = @info
